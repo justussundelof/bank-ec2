@@ -15,7 +15,7 @@ export default function Account() {
       return;
     }
 
-    fetch("http://ec2-51-20-106-195.eu-north-1.compute.amazonaws.com:3001/me/accounts", {
+    fetch("http://localhost:3001/me/accounts", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ token }),
@@ -51,7 +51,7 @@ export default function Account() {
 
     try {
       const res = await fetch(
-        "http://ec2-51-20-106-195.eu-north-1.compute.amazonaws.com:3001/me/accounts/transactions",
+        "http://localhost:3001/me/accounts/transactions",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -41,10 +41,9 @@ app.post("/sessions", (req, res) => {
 });
 
 console.log("Alla användare:", users);
-app.get('/', (req, res) => {
-  return res.status(200).send('API is up and running');
+app.get("/", (req, res) => {
+  return res.status(200).send("API is up and running");
 });
-
 
 app.post("/me/accounts", (req, res) => {
   const { token } = req.body;
@@ -64,5 +63,5 @@ app.post("/me/accounts/transactions", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Bankens backend körs på ec2-51-20-106-195.eu-north-1.compute.amazonaws.com:${port}`);
+  console.log(`Bankens backend körs på http://localhost:${port}`);
 });

@@ -9,14 +9,14 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://ec2-51-20-106-195.eu-north-1.compute.amazonaws.com:3001/users", {
+      const res = await fetch("http://localhost:3001/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
       const data = await res.json();
       if (res.ok) {
-        router.push("/login"); 
+        router.push("/login");
       } else {
         alert(data.message || "Kunde inte skapa användare");
       }
